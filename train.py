@@ -60,7 +60,7 @@ def evaluate(model, data_loader, device, loss_criterion=F.cross_entropy):
     val_acc /= N
     return val_loss, val_acc
 
-def get_model(dataset, lr=0.02, sparsity = 0.0):
+def get_model(dataset, lr=0.1, sparsity = 0.0):
     """
     Returns the appropriate model
     """
@@ -73,6 +73,6 @@ def get_model(dataset, lr=0.02, sparsity = 0.0):
         prune_weights_reparam(model)
         prune_weights_erk(model, sparsity)
         
-    optimizer = optim.SGD(model.parameters(), lr=lr, momentum=0.9, weight_decay=5e-4) # settings as in the DivideMix paper
+    optimizer = optim.SGD(model.parameters(), lr=lr, momentum=0.9, weight_decay=1e-4) # settings as in the Resnet paper
         
     return model, optimizer
