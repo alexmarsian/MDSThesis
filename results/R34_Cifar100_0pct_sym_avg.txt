@@ -1,0 +1,7 @@
+Repeats: 3
+Average Training Accuracy: 0.9997583333333333
+Average Training Loss: 1.2468195182581743e-07
+Average Validation Accuracy: 0.7488333333333334
+Average Validation Loss: 1.0446780944665273
+Average Test Accuracy: 0.7440000000000001
+Average Test Loss: 1.0542888873418172
