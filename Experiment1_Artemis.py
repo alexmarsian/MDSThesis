@@ -1,4 +1,4 @@
-from dataloaders.cifar import CifarDataloader
+from dataloaders.cifar_artemis import CifarDataloader
 from train import *
 from pathlib import Path
 import numpy as np
