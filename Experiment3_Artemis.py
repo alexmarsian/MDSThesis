@@ -72,7 +72,7 @@ def run(dataset, noise_rate, noise_mode, sparsity, batch_size,
                 best_epoch = epoch
                 best_val_loss = val_loss
                 best_train_loss = train_loss
-                torch.save(model.state_dict(), weightsDir / Path(f'best_forward_exp1.pkl')) # Different model paths for eac experiment
+                torch.save(model.state_dict(), weightsDir / Path(f'best_forward_exp3.pkl'))
 
             schedule.step()
 
@@ -97,7 +97,7 @@ def run(dataset, noise_rate, noise_mode, sparsity, batch_size,
         f.write("Final val accuracy: {:.4f}\n".format(val_acc_list[best_epoch]))
 
         # load best model saved during training
-        model.load_state_dict(torch.load(weightsDir / Path(f'best_forward_exp1.pkl'), map_location=device))
+        model.load_state_dict(torch.load(weightsDir / Path(f'best_forward_exp3.pkl'), map_location=device))
         test_loss, test_acc = evaluate(model, test_loader, device)
         print("Test accuracy: {:.4f}".format(test_acc))
         f.write("Test accuracy: {:.4f}\n".format(test_acc))
@@ -129,73 +129,43 @@ def run(dataset, noise_rate, noise_mode, sparsity, batch_size,
         f.write(f"Average Test Loss: {np.mean(avgTestLoss)}\n")
         f.write(f"Stdev Test Loss: {np.std(avgTestLoss)}\n")
         
-# Dense, No noise, Cifar10
-dataset = "cifar10"
-noise_rate = 0.0
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "NoNoiseCifar10"
-sparsity = 0
-weightFileName = f"R18_Cifar10_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
-
-# Dense, 20% Symmetric Noise, Cifar10
-dataset = "cifar10"
-noise_rate = 0.2
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "20SymNoiseCifar10"
-sparsity = 0
-weightFileName = f"R18_Cifar10_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
-
-# Sparse, No noise, Cifar10
-dataset = "cifar10"
-noise_rate = 0.0
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "NoNoiseCifar10"
-sparsity = 0.8
-weightFileName = f"R18_20SparseCifar10_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
-
-# Sparse, 20% symmetric noise, Cifar10
-dataset = "cifar10"
-noise_rate = 0.2
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "20SymNoiseCifar10"
-sparsity = 0.8
-weightFileName = f"R18_20SparseCifar10_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
-
-# Dense, no noise, Cifar100
+# Dense, 50% Symmetric Noise, Cifar100
 dataset = "cifar100"
-noise_rate = 0.0
+noise_rate = 0.5
 noise_mode="sym"
 batch_size=128
 datapath=datapath
-noise_file = "NoNoiseCifar100"
+noise_file = "50SymNoiseCifar100"
+sparsity = 0
+weightFileName = f"R34_Cifar100_{int(noise_rate*100)}pct_{noise_mode}"
+repeats = 3
+
+# function to run training and evaluation loop
+run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
+    datapath, noise_file, weightFileName, repeats)
+ 
+# Dense, 80% Symmetric Noise, Cifar100
+dataset = "cifar100"
+noise_rate = 0.8
+noise_mode="sym"
+batch_size=128
+datapath=datapath
+noise_file = "80SymNoiseCifar100"
+sparsity = 0
+weightFileName = f"R34_Cifar100_{int(noise_rate*100)}pct_{noise_mode}"
+repeats = 3
+
+# function to run training and evaluation loop
+run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
+    datapath, noise_file, weightFileName, repeats)
+ 
+# Dense, 90% Symmetric Noise, Cifar100
+dataset = "cifar100"
+noise_rate = 0.9
+noise_mode="sym"
+batch_size=128
+datapath=datapath
+noise_file = "90SymNoiseCifar100"
 sparsity = 0
 weightFileName = f"R34_Cifar100_{int(noise_rate*100)}pct_{noise_mode}"
 repeats = 3
@@ -204,28 +174,13 @@ repeats = 3
 run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
     datapath, noise_file, weightFileName, repeats)
 
-# Dense, 20% symmetric noise, Cifar100
+# Sparse, 50% symmetric noise, Cifar100
 dataset = "cifar100"
-noise_rate = 0.2
+noise_rate = 0.5
 noise_mode="sym"
 batch_size=128
 datapath=datapath
-noise_file = "20SymCifar100"
-sparsity = 0
-weightFileName = f"R34_Cifar100_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
-
-# Sparse, no noise, Cifar100
-dataset = "cifar100"
-noise_rate = 0
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "NoNoiseCifar100"
+noise_file = "50SymNoiseCifar100"
 sparsity = 0.8
 weightFileName = f"R34_20SparseCifar100_{int(noise_rate*100)}pct_{noise_mode}"
 repeats = 3
@@ -234,13 +189,14 @@ repeats = 3
 run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
     datapath, noise_file, weightFileName, repeats)
 
-# Sparse, 20% symmetric noise, Cifar100
+
+# Sparse, 80% symmetric noise, Cifar100
 dataset = "cifar100"
-noise_rate = 0.2
+noise_rate = 0.8
 noise_mode="sym"
 batch_size=128
 datapath=datapath
-noise_file = "20SymCifar100"
+noise_file = "80SymNoiseCifar100"
 sparsity = 0.8
 weightFileName = f"R34_20SparseCifar100_{int(noise_rate*100)}pct_{noise_mode}"
 repeats = 3
@@ -248,3 +204,20 @@ repeats = 3
 # function to run training and evaluation loop
 run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
     datapath, noise_file, weightFileName, repeats)
+
+
+# Sparse, 90% symmetric noise, Cifar100
+dataset = "cifar100"
+noise_rate = 0.9
+noise_mode="sym"
+batch_size=128
+datapath=datapath
+noise_file = "90SymNoiseCifar100"
+sparsity = 0.8
+weightFileName = f"R34_20SparseCifar100_{int(noise_rate*100)}pct_{noise_mode}"
+repeats = 3
+
+# function to run training and evaluation loop
+run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
+    datapath, noise_file, weightFileName, repeats)
+

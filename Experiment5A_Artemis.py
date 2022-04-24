@@ -1,3 +1,7 @@
+# Runs CIFAR10 with 20% noise for 9 different sparsity levels
+# Total experiment requires a wall time of at least 24 hours, 
+# so recommend splitting into parts A and B as done here to improve queue placement
+
 from dataloaders.cifar_artemis import CifarDataloader
 from train import *
 from pathlib import Path
@@ -23,7 +27,7 @@ def run(dataset, noise_rate, noise_mode, sparsity, batch_size,
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     
     # same optimisation and epoch schedule used
-    epochs = 160
+    epochs = 200
     
     # running averages
     avgTrainAcc, avgTrainLoss = [],[]
@@ -45,7 +49,7 @@ def run(dataset, noise_rate, noise_mode, sparsity, batch_size,
 
         # initialise model and learning rate schedule
         model, optimizer = get_model(dataset, lr=0.1, sparsity=sparsity)
-        schedule = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[80, 120], gamma=0.1) # schedule based on Resnet paper ("Deep residual networks for...")
+        schedule = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[100, 150], gamma=0.1) # schedule based on Resnet paper ("Deep residual networks for...")
         model = model.to(device)
 
         # save the model for best validaiton loss throughout training    
@@ -72,7 +76,7 @@ def run(dataset, noise_rate, noise_mode, sparsity, batch_size,
                 best_epoch = epoch
                 best_val_loss = val_loss
                 best_train_loss = train_loss
-                torch.save(model.state_dict(), weightsDir / Path(f'best_forward_exp1.pkl')) # Different model paths for eac experiment
+                torch.save(model.state_dict(), weightsDir / Path(f'best_forward_exp5A.pkl'))
 
             schedule.step()
 
@@ -97,7 +101,7 @@ def run(dataset, noise_rate, noise_mode, sparsity, batch_size,
         f.write("Final val accuracy: {:.4f}\n".format(val_acc_list[best_epoch]))
 
         # load best model saved during training
-        model.load_state_dict(torch.load(weightsDir / Path(f'best_forward_exp1.pkl'), map_location=device))
+        model.load_state_dict(torch.load(weightsDir / Path(f'best_forward_exp5A.pkl'), map_location=device))
         test_loss, test_acc = evaluate(model, test_loader, device)
         print("Test accuracy: {:.4f}".format(test_acc))
         f.write("Test accuracy: {:.4f}\n".format(test_acc))
@@ -128,123 +132,23 @@ def run(dataset, noise_rate, noise_mode, sparsity, batch_size,
         f.write(f"Stdev Test Accuracy: {np.std(avgTestAcc)}\n")
         f.write(f"Average Test Loss: {np.mean(avgTestLoss)}\n")
         f.write(f"Stdev Test Loss: {np.std(avgTestLoss)}\n")
-        
-# Dense, No noise, Cifar10
-dataset = "cifar10"
-noise_rate = 0.0
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "NoNoiseCifar10"
-sparsity = 0
-weightFileName = f"R18_Cifar10_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
 
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
 
-# Dense, 20% Symmetric Noise, Cifar10
+# Sparse network, CIFAR10, 20% symmetric noise
+# Settings for training run
 dataset = "cifar10"
 noise_rate = 0.2
 noise_mode="sym"
 batch_size=128
 datapath=datapath
 noise_file = "20SymNoiseCifar10"
-sparsity = 0
-weightFileName = f"R18_Cifar10_{int(noise_rate*100)}pct_{noise_mode}"
+sparsity = [0.9, 0.8, 0.7, 0.6, 0.5]
 repeats = 3
 
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
-
-# Sparse, No noise, Cifar10
-dataset = "cifar10"
-noise_rate = 0.0
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "NoNoiseCifar10"
-sparsity = 0.8
-weightFileName = f"R18_20SparseCifar10_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
-
-# Sparse, 20% symmetric noise, Cifar10
-dataset = "cifar10"
-noise_rate = 0.2
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "20SymNoiseCifar10"
-sparsity = 0.8
-weightFileName = f"R18_20SparseCifar10_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
-
-# Dense, no noise, Cifar100
-dataset = "cifar100"
-noise_rate = 0.0
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "NoNoiseCifar100"
-sparsity = 0
-weightFileName = f"R34_Cifar100_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
-
-# Dense, 20% symmetric noise, Cifar100
-dataset = "cifar100"
-noise_rate = 0.2
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "20SymCifar100"
-sparsity = 0
-weightFileName = f"R34_Cifar100_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
-
-# Sparse, no noise, Cifar100
-dataset = "cifar100"
-noise_rate = 0
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "NoNoiseCifar100"
-sparsity = 0.8
-weightFileName = f"R34_20SparseCifar100_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
-
-# Sparse, 20% symmetric noise, Cifar100
-dataset = "cifar100"
-noise_rate = 0.2
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "20SymCifar100"
-sparsity = 0.8
-weightFileName = f"R34_20SparseCifar100_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats)
+for s in sparsity:
+    sname = int(s*100)
+    weightFileName = f"R18_sparse{sname}_Cifar10_{int(noise_rate*100)}pct_{noise_mode}"
+    
+    # function to run training and evaluation loop
+    run(dataset, noise_rate, noise_mode, s, batch_size, 
+        datapath, noise_file, weightFileName, repeats)

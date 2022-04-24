@@ -45,7 +45,10 @@ class CifarDataset(Dataset):
         # define class variables
         self.nr = noise_rate # noise rate
         self.transform = transform
-        self.transition = {0:0,2:0,4:7,7:7,1:1,9:1,3:5,5:3,6:6,8:8} # class transition for asymmetric noise
+        if dataset=='cifar10':
+            self.transition = {0:0,2:0,4:7,7:7,1:1,9:1,3:5,5:3,6:6,8:8} # class transition for asymmetric noise (same as divideMix for CIFAR10)
+        elif dataset=='cifar100':
+            self.transition = {c:np.random.randint(100) for c in range(100)} # class transition for asymmetric noise (random)
         self.train = train
         
         # load test data

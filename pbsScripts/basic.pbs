@@ -1,0 +1,15 @@
+#!/bin/bash
+#Create indexes for reference sequence
+#PBS -P Project
+#PBS -N Index_YourName
+#PBS -l select=1:ncpus=1:mem=4GB
+#PBS -l walltime=00:10:00
+#PBS -q small-express
+
+# Load modules
+module load python3.8.2
+module load Torch
+
+io=/project/Project/AlexThesisCode
+
+
