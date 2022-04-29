@@ -134,8 +134,8 @@ class CifarDataset(Dataset):
         
 
 class CifarDataloader():  
-    def __init__(self, dataset, noise_rate, noise_mode, batch_size, datapath, noise_file='noisylabels.json', num_workers=2, valid_seed = 1, valid_pct=0.2):
-            
+    def __init__(self, dataset, noise_rate, noise_mode, batch_size, datapath, noise_file='noisylabels.json', 
+    num_workers=2, valid_seed = 1, valid_pct=0.2):
         # set transforms for training and test data
         if dataset=='cifar10':
             self.transform_train = transforms.Compose([
