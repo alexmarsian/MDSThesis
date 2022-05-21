@@ -184,8 +184,8 @@ def run(dataset, noise_rate, noise_mode, sparsity, batch_size,
         if sparse_args != {}:
             layer_fired_weights, total_fired_weights = mask.fired_masks_update()
             for name in layer_fired_weights:
-                f.write('The final percentage of fired weights in the layer', name, 'is:', layer_fired_weights[name])
-            f.write('The final percentage of the total fired weights is:', total_fired_weights)
+                f.write(f'The final percentage of fired weights in the layer {name} is: {layer_fired_weights[name]}')
+            f.write(f'The final percentage of the total fired weights is: {total_fired_weights}')
 
         f.close()
         
@@ -284,3 +284,16 @@ weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
 # function to run training and evaluation loop
 run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
     datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
+
+# SET, 20% Density, CIFAR10 with 20% Symmetric Noise
+noise_rate = 0.4
+noise_mode="asym"
+noise_file = "asymCifar10"
+weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
+repeats = 3
+
+# function to run training and evaluation loop
+run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
+    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
+
+

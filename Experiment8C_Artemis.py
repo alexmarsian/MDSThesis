@@ -222,58 +222,11 @@ sparse_args = {'multiplier': 1,
 
 # SET, 20% Density, CIFAR100 with 20% Symmetric Noise
 dataset = "cifar100"
-noise_rate = 0.2
 noise_mode="sym"
 batch_size=128
 datapath=datapath
-noise_file = "20SymCifar100"
 sparsity = 0.8
-weightFileName = f"R34_Cifar100_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
 repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 30% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.3
-noise_file = "30SymNoiseCifar100"
-weightFileName = f"R34_Cifar100_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 40% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.4
-noise_file = "40SymNoiseCifar100"
-weightFileName = f"R34_Cifar100_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 50% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.5
-noise_file = "50SymNoiseCifar100"
-weightFileName = f"R34_Cifar100_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 80% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.8
-noise_file = "80SymNoiseCifar100"
-weightFileName = f"R34_Cifar100_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
 
 # SET, 20% Density, CIFAR10 with 90% Symmetric Noise
 # Only relevant parameters changed
