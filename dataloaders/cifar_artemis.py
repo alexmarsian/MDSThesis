@@ -5,6 +5,7 @@ import torchvision.transforms as transforms
 import numpy as np
 import random
 from PIL import Image
+import torch
 
 def unpickle(file):
     """
@@ -88,33 +89,41 @@ class CifarDataset(Dataset):
             train_data = train_data.transpose((0, 2, 3, 1))
             
             # create noisy labels
-            noise_file = datapath / Path('noisyLabels') / Path(noise_file)
-            if noise_file.exists():
-                noise_label = json.load(open(noise_file,"r"))
-            else:    #inject noise   
-                noise_label = []
-                idx = list(range(50000))
-                random.shuffle(idx)
-                num_noise = int(self.nr*50000)            
-                noise_idx = idx[:num_noise]
-                for i in range(50000):
-                    if i in noise_idx:
-                        if noise_mode=='sym':
-                            if dataset=='cifar10': 
-                                noiselabel = random.randint(0,9)
-                            elif dataset=='cifar100':    
-                                noiselabel = random.randint(0,99)
-                            noise_label.append(noiselabel)
-                        elif noise_mode=='asym':   
-                            noiselabel = self.transition[train_label[i]]
-                            noise_label.append(noiselabel)                    
-                    else:    
-                        noise_label.append(train_label[i])
-                # save noisy labels file to allow repeated experiments
-                print(f"saving noisy labels to {noise_file} ...")
-                noise_file.parent.absolute().mkdir(exist_ok=True)
-                with open(noise_file, 'w') as f:
-                    json.dump(noise_label,f)
+            if noise_mode == 'human':
+                if dataset == 'cifar10':
+                    noise_file = torch.load('./data/CIFAR-10_human.pt')
+                    noise_label = noise_file['random_label1']
+                elif dataset == 'cifar100':
+                    noise_file = torch.load('./data/CIFAR-100_human.pt')
+                    noise_label = noise_file['noisy_label']
+            else:
+                noise_file = datapath / Path('noisyLabels') / Path(noise_file)
+                if noise_file.exists():
+                    noise_label = json.load(open(noise_file,"r"))
+                else:    #inject noise   
+                    noise_label = []
+                    idx = list(range(50000))
+                    random.shuffle(idx)
+                    num_noise = int(self.nr*50000)            
+                    noise_idx = idx[:num_noise]
+                    for i in range(50000):
+                        if i in noise_idx:
+                            if noise_mode=='sym':
+                                if dataset=='cifar10': 
+                                    noiselabel = random.randint(0,9)
+                                elif dataset=='cifar100':    
+                                    noiselabel = random.randint(0,99)
+                                noise_label.append(noiselabel)
+                            elif noise_mode=='asym':   
+                                noiselabel = self.transition[train_label[i]]
+                                noise_label.append(noiselabel)                    
+                        else:    
+                            noise_label.append(train_label[i])
+                    # save noisy labels file to allow repeated experiments
+                    print(f"saving noisy labels to {noise_file} ...")
+                    noise_file.parent.absolute().mkdir(exist_ok=True)
+                    with open(noise_file, 'w') as f:
+                        json.dump(noise_label,f)
                 
             train_data, train_labels, val_data, val_labels = split(train_data, noise_label, valid_pct, seed)
             # if you don't want a validation split, set valid_pct to 0.0 and valid = False, otherwise split is made by default

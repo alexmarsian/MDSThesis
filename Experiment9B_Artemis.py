@@ -220,80 +220,26 @@ sparse_args = {'multiplier': 1,
               'sparse_init':'ERK',
               'fix': False}
 
-# SET, 20% Density, CIFAR10 with 20% Symmetric Noise
-dataset = "cifar10"
-noise_rate = 0.2
-noise_mode="sym"
+# SET, 20% Density, CIFAR100 with human noise
+dataset = "cifar100"
+noise_mode="human"
 batch_size=128
 datapath=datapath
-noise_file = "20SymNoiseCifar10"
 sparsity = 0.8
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
 repeats = 3
+noise_rate = 0.0
+noise_file = "humanCifar100"
+weightFileName = f"R34_Cifar100_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
 
 # function to run training and evaluation loop
 run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
     datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
 
-# SET, 20% Density, CIFAR10 with 30% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.3
-noise_file = "30SymNoiseCifar10"
+# SET, 20% Density, CIFAR10 with human noise
+dataset = "cifar10"
+noise_file = "humanCifar10"
 weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
 
 # function to run training and evaluation loop
 run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
     datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 40% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.4
-noise_file = "40SymNoiseCifar10"
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 50% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.5
-noise_file = "50SymNoiseCifar10"
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 80% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.8
-noise_file = "80SymNoiseCifar10"
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 90% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.9
-noise_file = "90SymNoiseCifar10"
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 40% asymmetric Noise
-noise_rate = 0.4
-noise_mode="asym"
-noise_file = "asymCifar10"
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-

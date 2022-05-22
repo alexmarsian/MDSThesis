@@ -207,93 +207,51 @@ def run(dataset, noise_rate, noise_mode, sparsity, batch_size,
         f.write(f"Stdev Test Loss: {np.std(avgTestLoss)}\n")
 
 # Training settings
-                                                           
+
 # Arguments to specify SET vs. RigL
 # these are settings for training SET
 sparse_args = {'multiplier': 1, 
               'decay_frequency':30000,
-               'update_frequency':1500,
+               'update_frequency':4000,
               'death_rate':0.50,
               'death_mode': 'magnitude',
-              'growth_mode':'random',
+              'growth_mode':'gradient',
               'redistribution':'none',
               'sparse_init':'ERK',
               'fix': False}
 
-# SET, 20% Density, CIFAR10 with 20% Symmetric Noise
-dataset = "cifar10"
-noise_rate = 0.2
-noise_mode="sym"
-batch_size=128
-datapath=datapath
-noise_file = "20SymNoiseCifar10"
-sparsity = 0.8
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-repeats = 3
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 30% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.3
-noise_file = "30SymNoiseCifar10"
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 40% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.4
-noise_file = "40SymNoiseCifar10"
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 50% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.5
-noise_file = "50SymNoiseCifar10"
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 80% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.8
-noise_file = "80SymNoiseCifar10"
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 90% Symmetric Noise
-# Only relevant parameters changed
-noise_rate = 0.9
-noise_file = "90SymNoiseCifar10"
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
-
-# function to run training and evaluation loop
-run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
-    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
-
-# SET, 20% Density, CIFAR10 with 40% asymmetric Noise
+# RigL, 20% Density, CIFAR100 with 40% Asymmetric Noise
+dataset = "cifar100"
 noise_rate = 0.4
 noise_mode="asym"
-noise_file = "asymCifar10"
-weightFileName = f"R18_Cifar10_sparseSET_{int(noise_rate*100)}pct_{noise_mode}"
+batch_size=128
+datapath=datapath
+noise_file = "asymCifar100"
+sparsity = 0.8
+weightFileName = f"R34_Cifar100_sparseRigL_{int(noise_rate*100)}pct_{noise_mode}"
 repeats = 3
 
 # function to run training and evaluation loop
 run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
     datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
 
+# RigL, 20% Density, CIFAR100 with Human Noise
+dataset = "cifar100"
+noise_rate = 0.0
+noise_mode="human"
+noise_file = "humanCifar100"
+weightFileName = f"R34_Cifar100_sparseRigL_{int(noise_rate*100)}pct_{noise_mode}"
 
+# function to run training and evaluation loop
+run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
+    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
+
+# RigL, 20% Density, CIFAR10 with Human Noise
+dataset = "cifar10"
+noise_mode="human"
+noise_file = "humanCifar10"
+weightFileName = f"R18_Cifar10_sparseRigL_{int(noise_rate*100)}pct_{noise_mode}"
+
+# function to run training and evaluation loop
+run(dataset, noise_rate, noise_mode, sparsity, batch_size, 
+    datapath, noise_file, weightFileName, repeats, sparse_args=sparse_args)
