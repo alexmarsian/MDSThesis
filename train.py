@@ -1,3 +1,4 @@
+from peer.peer_core import *
 import torch
 import torch.nn.functional as F
 import torch.optim as optim
@@ -6,7 +7,9 @@ from tools.prune import *
 import numpy as np
 import time
 
-def train(model, optimizer, data_loader, device, loss_criterion=F.cross_entropy):
+def train(epoch, model, optimizer, data_loader, device, 
+          loss_criterion=F.cross_entropy, mask=None,
+         peer_loader = None):
     """
     Trains the model for one epoch
     """
@@ -21,10 +24,24 @@ def train(model, optimizer, data_loader, device, loss_criterion=F.cross_entropy)
         optimizer.zero_grad()
         # get outputs and calculate loss
         outputs = model(batch_x)
-        loss = loss_criterion(outputs, batch_y)
-        # backpropagate and update optimizer
-        loss.backward()
-        optimizer.step()
+        if peer_loader is not None:
+            # Prepare mixmatched images and labels for the Peer Term
+            peer_iter = iter(peer_loader)
+            input1 = peer_iter.next()[0]
+            output1 = model(input1.to(device))
+            target2 = peer_iter.next()[1]
+            target2 = torch.Tensor(target2.float())
+            target2 = torch.autograd.Variable(target2.to(device))
+            # Peer Loss with Cross-Entropy loss: L(f(x), y) - L(f(x1), y2)
+            loss = loss_criterion(outputs, batch_y.long()) - f_alpha(epoch) * loss_criterion(output1, target2.long())
+            loss.to(device)
+            loss.backward()
+        else:
+            loss = loss_criterion(outputs, batch_y)
+            # backpropagate and update optimizer
+            loss.backward()
+        if mask is not None: mask.step() # required for Sparse Evolutionary Training
+        else: optimizer.step()
         train_loss += loss.item() * len(batch_x)
         # calculate training accuracy
         pred = torch.max(outputs, 1)[1]
