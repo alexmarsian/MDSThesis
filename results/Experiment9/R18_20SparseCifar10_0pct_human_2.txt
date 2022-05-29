@@ -1,0 +1,646 @@
+Epoch: 1
+Train Loss: 0.000055, Acc: 0.239650
+Val Loss: 1.877450,  Acc: 0.294900
+Took 0.24 minutes.
+Epoch: 2
+Train Loss: 0.000044, Acc: 0.359925
+Val Loss: 1.690894,  Acc: 0.384700
+Took 0.22 minutes.
+Epoch: 3
+Train Loss: 0.000040, Acc: 0.437025
+Val Loss: 1.627534,  Acc: 0.439200
+Took 0.24 minutes.
+Epoch: 4
+Train Loss: 0.000037, Acc: 0.491425
+Val Loss: 1.439550,  Acc: 0.504600
+Took 0.23 minutes.
+Epoch: 5
+Train Loss: 0.000035, Acc: 0.531300
+Val Loss: 1.330993,  Acc: 0.565600
+Took 0.23 minutes.
+Epoch: 6
+Train Loss: 0.000033, Acc: 0.569400
+Val Loss: 1.321476,  Acc: 0.565200
+Took 0.23 minutes.
+Epoch: 7
+Train Loss: 0.000031, Acc: 0.596850
+Val Loss: 1.267282,  Acc: 0.595000
+Took 0.23 minutes.
+Epoch: 8
+Train Loss: 0.000030, Acc: 0.614975
+Val Loss: 1.214256,  Acc: 0.617300
+Took 0.22 minutes.
+Epoch: 9
+Train Loss: 0.000029, Acc: 0.635250
+Val Loss: 1.204841,  Acc: 0.618600
+Took 0.23 minutes.
+Epoch: 10
+Train Loss: 0.000028, Acc: 0.655500
+Val Loss: 1.151545,  Acc: 0.643400
+Took 0.23 minutes.
+Epoch: 11
+Train Loss: 0.000027, Acc: 0.671125
+Val Loss: 1.186367,  Acc: 0.636300
+Took 0.21 minutes.
+Epoch: 12
+Train Loss: 0.000026, Acc: 0.683025
+Val Loss: 1.145103,  Acc: 0.652500
+Took 0.23 minutes.
+Epoch: 13
+Train Loss: 0.000025, Acc: 0.695050
+Val Loss: 1.080526,  Acc: 0.675400
+Took 0.23 minutes.
+Epoch: 14
+Train Loss: 0.000025, Acc: 0.705550
+Val Loss: 1.079629,  Acc: 0.682200
+Took 0.23 minutes.
+Epoch: 15
+Train Loss: 0.000024, Acc: 0.713650
+Val Loss: 1.024884,  Acc: 0.702300
+Took 0.22 minutes.
+Epoch: 16
+Train Loss: 0.000024, Acc: 0.718700
+Val Loss: 1.051948,  Acc: 0.691700
+Took 0.21 minutes.
+Epoch: 17
+Train Loss: 0.000023, Acc: 0.729750
+Val Loss: 1.014143,  Acc: 0.705900
+Took 0.22 minutes.
+Epoch: 18
+Train Loss: 0.000023, Acc: 0.734375
+Val Loss: 1.041940,  Acc: 0.697100
+Took 0.21 minutes.
+Epoch: 19
+Train Loss: 0.000022, Acc: 0.740225
+Val Loss: 1.051395,  Acc: 0.692800
+Took 0.21 minutes.
+Epoch: 20
+Train Loss: 0.000022, Acc: 0.743175
+Val Loss: 1.025530,  Acc: 0.709300
+Took 0.21 minutes.
+Epoch: 21
+Train Loss: 0.000022, Acc: 0.749350
+Val Loss: 1.035868,  Acc: 0.707700
+Took 0.21 minutes.
+Epoch: 22
+Train Loss: 0.000021, Acc: 0.751725
+Val Loss: 1.015299,  Acc: 0.714100
+Took 0.21 minutes.
+Epoch: 23
+Train Loss: 0.000021, Acc: 0.758575
+Val Loss: 1.018650,  Acc: 0.715200
+Took 0.21 minutes.
+Epoch: 24
+Train Loss: 0.000021, Acc: 0.761500
+Val Loss: 0.995281,  Acc: 0.716600
+Took 0.23 minutes.
+Epoch: 25
+Train Loss: 0.000020, Acc: 0.764675
+Val Loss: 1.014205,  Acc: 0.712700
+Took 0.21 minutes.
+Epoch: 26
+Train Loss: 0.000020, Acc: 0.768650
+Val Loss: 0.973077,  Acc: 0.728100
+Took 0.22 minutes.
+Epoch: 27
+Train Loss: 0.000020, Acc: 0.773900
+Val Loss: 1.014090,  Acc: 0.715100
+Took 0.21 minutes.
+Epoch: 28
+Train Loss: 0.000020, Acc: 0.773650
+Val Loss: 0.985285,  Acc: 0.724400
+Took 0.21 minutes.
+Epoch: 29
+Train Loss: 0.000019, Acc: 0.779750
+Val Loss: 1.048772,  Acc: 0.705700
+Took 0.21 minutes.
+Epoch: 30
+Train Loss: 0.000019, Acc: 0.781675
+Val Loss: 1.022588,  Acc: 0.720700
+Took 0.21 minutes.
+Epoch: 31
+Train Loss: 0.000019, Acc: 0.782150
+Val Loss: 1.020696,  Acc: 0.716000
+Took 0.21 minutes.
+Epoch: 32
+Train Loss: 0.000019, Acc: 0.786375
+Val Loss: 1.066553,  Acc: 0.707500
+Took 0.21 minutes.
+Epoch: 33
+Train Loss: 0.000018, Acc: 0.789850
+Val Loss: 1.067473,  Acc: 0.704600
+Took 0.21 minutes.
+Epoch: 34
+Train Loss: 0.000018, Acc: 0.790050
+Val Loss: 1.058362,  Acc: 0.716100
+Took 0.21 minutes.
+Epoch: 35
+Train Loss: 0.000018, Acc: 0.794525
+Val Loss: 1.061416,  Acc: 0.708800
+Took 0.21 minutes.
+Epoch: 36
+Train Loss: 0.000018, Acc: 0.796250
+Val Loss: 1.087001,  Acc: 0.706100
+Took 0.21 minutes.
+Epoch: 37
+Train Loss: 0.000017, Acc: 0.798350
+Val Loss: 1.104335,  Acc: 0.707700
+Took 0.21 minutes.
+Epoch: 38
+Train Loss: 0.000017, Acc: 0.802475
+Val Loss: 1.066813,  Acc: 0.718700
+Took 0.21 minutes.
+Epoch: 39
+Train Loss: 0.000017, Acc: 0.806300
+Val Loss: 1.073061,  Acc: 0.716200
+Took 0.21 minutes.
+Epoch: 40
+Train Loss: 0.000017, Acc: 0.807825
+Val Loss: 1.139714,  Acc: 0.696500
+Took 0.21 minutes.
+Epoch: 41
+Train Loss: 0.000016, Acc: 0.807300
+Val Loss: 1.084992,  Acc: 0.717500
+Took 0.21 minutes.
+Epoch: 42
+Train Loss: 0.000016, Acc: 0.809100
+Val Loss: 1.174818,  Acc: 0.687400
+Took 0.21 minutes.
+Epoch: 43
+Train Loss: 0.000016, Acc: 0.810750
+Val Loss: 1.101754,  Acc: 0.712100
+Took 0.21 minutes.
+Epoch: 44
+Train Loss: 0.000016, Acc: 0.812425
+Val Loss: 1.154486,  Acc: 0.697500
+Took 0.21 minutes.
+Epoch: 45
+Train Loss: 0.000015, Acc: 0.817125
+Val Loss: 1.123789,  Acc: 0.711100
+Took 0.21 minutes.
+Epoch: 46
+Train Loss: 0.000015, Acc: 0.818050
+Val Loss: 1.099612,  Acc: 0.714100
+Took 0.21 minutes.
+Epoch: 47
+Train Loss: 0.000015, Acc: 0.822250
+Val Loss: 1.167788,  Acc: 0.698800
+Took 0.21 minutes.
+Epoch: 48
+Train Loss: 0.000015, Acc: 0.819300
+Val Loss: 1.142432,  Acc: 0.706300
+Took 0.21 minutes.
+Epoch: 49
+Train Loss: 0.000015, Acc: 0.825650
+Val Loss: 1.193586,  Acc: 0.697100
+Took 0.21 minutes.
+Epoch: 50
+Train Loss: 0.000014, Acc: 0.825200
+Val Loss: 1.244874,  Acc: 0.699400
+Took 0.21 minutes.
+Epoch: 51
+Train Loss: 0.000014, Acc: 0.827250
+Val Loss: 1.231755,  Acc: 0.689700
+Took 0.21 minutes.
+Epoch: 52
+Train Loss: 0.000014, Acc: 0.829850
+Val Loss: 1.183056,  Acc: 0.711300
+Took 0.21 minutes.
+Epoch: 53
+Train Loss: 0.000014, Acc: 0.829850
+Val Loss: 1.235306,  Acc: 0.693300
+Took 0.21 minutes.
+Epoch: 54
+Train Loss: 0.000014, Acc: 0.833250
+Val Loss: 1.306654,  Acc: 0.693500
+Took 0.21 minutes.
+Epoch: 55
+Train Loss: 0.000013, Acc: 0.836125
+Val Loss: 1.192328,  Acc: 0.712400
+Took 0.21 minutes.
+Epoch: 56
+Train Loss: 0.000013, Acc: 0.836450
+Val Loss: 1.270474,  Acc: 0.692200
+Took 0.21 minutes.
+Epoch: 57
+Train Loss: 0.000013, Acc: 0.839075
+Val Loss: 1.230415,  Acc: 0.697800
+Took 0.21 minutes.
+Epoch: 58
+Train Loss: 0.000013, Acc: 0.839775
+Val Loss: 1.374059,  Acc: 0.686200
+Took 0.21 minutes.
+Epoch: 59
+Train Loss: 0.000013, Acc: 0.839875
+Val Loss: 1.296602,  Acc: 0.691000
+Took 0.21 minutes.
+Epoch: 60
+Train Loss: 0.000013, Acc: 0.840200
+Val Loss: 1.262228,  Acc: 0.710500
+Took 0.21 minutes.
+Epoch: 61
+Train Loss: 0.000012, Acc: 0.847375
+Val Loss: 1.448720,  Acc: 0.677400
+Took 0.21 minutes.
+Epoch: 62
+Train Loss: 0.000012, Acc: 0.843475
+Val Loss: 1.316357,  Acc: 0.686800
+Took 0.21 minutes.
+Epoch: 63
+Train Loss: 0.000012, Acc: 0.846900
+Val Loss: 1.352454,  Acc: 0.674700
+Took 0.21 minutes.
+Epoch: 64
+Train Loss: 0.000012, Acc: 0.849400
+Val Loss: 1.541958,  Acc: 0.660900
+Took 0.21 minutes.
+Epoch: 65
+Train Loss: 0.000012, Acc: 0.849950
+Val Loss: 1.408665,  Acc: 0.685600
+Took 0.21 minutes.
+Epoch: 66
+Train Loss: 0.000011, Acc: 0.853200
+Val Loss: 1.366085,  Acc: 0.680500
+Took 0.21 minutes.
+Epoch: 67
+Train Loss: 0.000012, Acc: 0.849725
+Val Loss: 1.379553,  Acc: 0.679500
+Took 0.21 minutes.
+Epoch: 68
+Train Loss: 0.000011, Acc: 0.856225
+Val Loss: 1.392956,  Acc: 0.681100
+Took 0.21 minutes.
+Epoch: 69
+Train Loss: 0.000011, Acc: 0.857800
+Val Loss: 1.437450,  Acc: 0.668000
+Took 0.21 minutes.
+Epoch: 70
+Train Loss: 0.000011, Acc: 0.858825
+Val Loss: 1.635550,  Acc: 0.665000
+Took 0.21 minutes.
+Epoch: 71
+Train Loss: 0.000011, Acc: 0.860075
+Val Loss: 1.460443,  Acc: 0.656700
+Took 0.21 minutes.
+Epoch: 72
+Train Loss: 0.000010, Acc: 0.867275
+Val Loss: 1.448172,  Acc: 0.684200
+Took 0.21 minutes.
+Epoch: 73
+Train Loss: 0.000010, Acc: 0.863875
+Val Loss: 1.528609,  Acc: 0.659000
+Took 0.21 minutes.
+Epoch: 74
+Train Loss: 0.000010, Acc: 0.864875
+Val Loss: 1.493558,  Acc: 0.687600
+Took 0.21 minutes.
+Epoch: 75
+Train Loss: 0.000010, Acc: 0.866775
+Val Loss: 1.494922,  Acc: 0.672300
+Took 0.21 minutes.
+Epoch: 76
+Train Loss: 0.000010, Acc: 0.870325
+Val Loss: 1.558347,  Acc: 0.653300
+Took 0.21 minutes.
+Epoch: 77
+Train Loss: 0.000010, Acc: 0.868450
+Val Loss: 1.663472,  Acc: 0.660700
+Took 0.21 minutes.
+Epoch: 78
+Train Loss: 0.000010, Acc: 0.873775
+Val Loss: 1.517326,  Acc: 0.670700
+Took 0.21 minutes.
+Epoch: 79
+Train Loss: 0.000009, Acc: 0.876275
+Val Loss: 1.696748,  Acc: 0.630500
+Took 0.21 minutes.
+Epoch: 80
+Train Loss: 0.000009, Acc: 0.875850
+Val Loss: 1.564716,  Acc: 0.663900
+Took 0.21 minutes.
+Epoch: 81
+Train Loss: 0.000006, Acc: 0.921150
+Val Loss: 1.436693,  Acc: 0.723900
+Took 0.21 minutes.
+Epoch: 82
+Train Loss: 0.000004, Acc: 0.945125
+Val Loss: 1.515986,  Acc: 0.720300
+Took 0.21 minutes.
+Epoch: 83
+Train Loss: 0.000004, Acc: 0.951725
+Val Loss: 1.564877,  Acc: 0.716600
+Took 0.21 minutes.
+Epoch: 84
+Train Loss: 0.000004, Acc: 0.955425
+Val Loss: 1.614242,  Acc: 0.713400
+Took 0.21 minutes.
+Epoch: 85
+Train Loss: 0.000003, Acc: 0.959600
+Val Loss: 1.653922,  Acc: 0.714300
+Took 0.21 minutes.
+Epoch: 86
+Train Loss: 0.000003, Acc: 0.963850
+Val Loss: 1.697586,  Acc: 0.713700
+Took 0.21 minutes.
+Epoch: 87
+Train Loss: 0.000003, Acc: 0.965425
+Val Loss: 1.746233,  Acc: 0.711400
+Took 0.21 minutes.
+Epoch: 88
+Train Loss: 0.000003, Acc: 0.969200
+Val Loss: 1.794450,  Acc: 0.711700
+Took 0.21 minutes.
+Epoch: 89
+Train Loss: 0.000002, Acc: 0.970950
+Val Loss: 1.819321,  Acc: 0.710200
+Took 0.21 minutes.
+Epoch: 90
+Train Loss: 0.000002, Acc: 0.972300
+Val Loss: 1.848998,  Acc: 0.711200
+Took 0.21 minutes.
+Epoch: 91
+Train Loss: 0.000002, Acc: 0.973825
+Val Loss: 1.864918,  Acc: 0.705900
+Took 0.21 minutes.
+Epoch: 92
+Train Loss: 0.000002, Acc: 0.974825
+Val Loss: 1.908202,  Acc: 0.711900
+Took 0.21 minutes.
+Epoch: 93
+Train Loss: 0.000002, Acc: 0.977075
+Val Loss: 1.925112,  Acc: 0.708300
+Took 0.21 minutes.
+Epoch: 94
+Train Loss: 0.000002, Acc: 0.976425
+Val Loss: 1.959558,  Acc: 0.708600
+Took 0.21 minutes.
+Epoch: 95
+Train Loss: 0.000002, Acc: 0.979225
+Val Loss: 1.962490,  Acc: 0.706300
+Took 0.21 minutes.
+Epoch: 96
+Train Loss: 0.000002, Acc: 0.979425
+Val Loss: 1.999312,  Acc: 0.708500
+Took 0.21 minutes.
+Epoch: 97
+Train Loss: 0.000002, Acc: 0.981350
+Val Loss: 2.043284,  Acc: 0.711000
+Took 0.21 minutes.
+Epoch: 98
+Train Loss: 0.000001, Acc: 0.982725
+Val Loss: 2.055348,  Acc: 0.707200
+Took 0.21 minutes.
+Epoch: 99
+Train Loss: 0.000001, Acc: 0.982950
+Val Loss: 2.078893,  Acc: 0.706600
+Took 0.21 minutes.
+Epoch: 100
+Train Loss: 0.000001, Acc: 0.983700
+Val Loss: 2.102196,  Acc: 0.709300
+Took 0.21 minutes.
+Epoch: 101
+Train Loss: 0.000001, Acc: 0.984675
+Val Loss: 2.114407,  Acc: 0.704100
+Took 0.21 minutes.
+Epoch: 102
+Train Loss: 0.000001, Acc: 0.985400
+Val Loss: 2.138891,  Acc: 0.704500
+Took 0.21 minutes.
+Epoch: 103
+Train Loss: 0.000001, Acc: 0.986225
+Val Loss: 2.186318,  Acc: 0.703500
+Took 0.21 minutes.
+Epoch: 104
+Train Loss: 0.000001, Acc: 0.987175
+Val Loss: 2.197254,  Acc: 0.706100
+Took 0.21 minutes.
+Epoch: 105
+Train Loss: 0.000001, Acc: 0.987750
+Val Loss: 2.204452,  Acc: 0.705700
+Took 0.21 minutes.
+Epoch: 106
+Train Loss: 0.000001, Acc: 0.988025
+Val Loss: 2.225354,  Acc: 0.706400
+Took 0.21 minutes.
+Epoch: 107
+Train Loss: 0.000001, Acc: 0.988800
+Val Loss: 2.241178,  Acc: 0.707300
+Took 0.21 minutes.
+Epoch: 108
+Train Loss: 0.000001, Acc: 0.988950
+Val Loss: 2.259742,  Acc: 0.705600
+Took 0.21 minutes.
+Epoch: 109
+Train Loss: 0.000001, Acc: 0.988775
+Val Loss: 2.275353,  Acc: 0.706900
+Took 0.21 minutes.
+Epoch: 110
+Train Loss: 0.000001, Acc: 0.989300
+Val Loss: 2.287960,  Acc: 0.705100
+Took 0.21 minutes.
+Epoch: 111
+Train Loss: 0.000001, Acc: 0.989075
+Val Loss: 2.316937,  Acc: 0.707800
+Took 0.21 minutes.
+Epoch: 112
+Train Loss: 0.000001, Acc: 0.989750
+Val Loss: 2.334555,  Acc: 0.709800
+Took 0.21 minutes.
+Epoch: 113
+Train Loss: 0.000001, Acc: 0.990075
+Val Loss: 2.360194,  Acc: 0.708400
+Took 0.21 minutes.
+Epoch: 114
+Train Loss: 0.000001, Acc: 0.991225
+Val Loss: 2.370213,  Acc: 0.705900
+Took 0.21 minutes.
+Epoch: 115
+Train Loss: 0.000001, Acc: 0.990375
+Val Loss: 2.380028,  Acc: 0.705900
+Took 0.21 minutes.
+Epoch: 116
+Train Loss: 0.000001, Acc: 0.991850
+Val Loss: 2.376455,  Acc: 0.705700
+Took 0.21 minutes.
+Epoch: 117
+Train Loss: 0.000001, Acc: 0.991775
+Val Loss: 2.408803,  Acc: 0.708800
+Took 0.21 minutes.
+Epoch: 118
+Train Loss: 0.000001, Acc: 0.992550
+Val Loss: 2.409169,  Acc: 0.705500
+Took 0.21 minutes.
+Epoch: 119
+Train Loss: 0.000001, Acc: 0.992400
+Val Loss: 2.438716,  Acc: 0.706900
+Took 0.21 minutes.
+Epoch: 120
+Train Loss: 0.000001, Acc: 0.992150
+Val Loss: 2.437269,  Acc: 0.708600
+Took 0.21 minutes.
+Epoch: 121
+Train Loss: 0.000001, Acc: 0.993750
+Val Loss: 2.428650,  Acc: 0.706800
+Took 0.21 minutes.
+Epoch: 122
+Train Loss: 0.000001, Acc: 0.994025
+Val Loss: 2.440863,  Acc: 0.709300
+Took 0.21 minutes.
+Epoch: 123
+Train Loss: 0.000001, Acc: 0.993875
+Val Loss: 2.430692,  Acc: 0.709700
+Took 0.21 minutes.
+Epoch: 124
+Train Loss: 0.000001, Acc: 0.995100
+Val Loss: 2.447671,  Acc: 0.709500
+Took 0.21 minutes.
+Epoch: 125
+Train Loss: 0.000001, Acc: 0.994475
+Val Loss: 2.438718,  Acc: 0.709900
+Took 0.21 minutes.
+Epoch: 126
+Train Loss: 0.000001, Acc: 0.994925
+Val Loss: 2.438058,  Acc: 0.710700
+Took 0.21 minutes.
+Epoch: 127
+Train Loss: 0.000001, Acc: 0.995825
+Val Loss: 2.439387,  Acc: 0.709500
+Took 0.21 minutes.
+Epoch: 128
+Train Loss: 0.000001, Acc: 0.995450
+Val Loss: 2.439401,  Acc: 0.710500
+Took 0.21 minutes.
+Epoch: 129
+Train Loss: 0.000001, Acc: 0.995175
+Val Loss: 2.449843,  Acc: 0.711200
+Took 0.21 minutes.
+Epoch: 130
+Train Loss: 0.000001, Acc: 0.995075
+Val Loss: 2.459874,  Acc: 0.711300
+Took 0.21 minutes.
+Epoch: 131
+Train Loss: 0.000001, Acc: 0.995050
+Val Loss: 2.456086,  Acc: 0.709800
+Took 0.21 minutes.
+Epoch: 132
+Train Loss: 0.000000, Acc: 0.995475
+Val Loss: 2.455210,  Acc: 0.709800
+Took 0.21 minutes.
+Epoch: 133
+Train Loss: 0.000001, Acc: 0.995425
+Val Loss: 2.457002,  Acc: 0.710400
+Took 0.21 minutes.
+Epoch: 134
+Train Loss: 0.000000, Acc: 0.995500
+Val Loss: 2.457365,  Acc: 0.710800
+Took 0.21 minutes.
+Epoch: 135
+Train Loss: 0.000000, Acc: 0.996000
+Val Loss: 2.456719,  Acc: 0.709600
+Took 0.21 minutes.
+Epoch: 136
+Train Loss: 0.000000, Acc: 0.995925
+Val Loss: 2.457830,  Acc: 0.708400
+Took 0.21 minutes.
+Epoch: 137
+Train Loss: 0.000001, Acc: 0.995375
+Val Loss: 2.457249,  Acc: 0.710700
+Took 0.21 minutes.
+Epoch: 138
+Train Loss: 0.000000, Acc: 0.995000
+Val Loss: 2.465693,  Acc: 0.709900
+Took 0.21 minutes.
+Epoch: 139
+Train Loss: 0.000001, Acc: 0.995225
+Val Loss: 2.464871,  Acc: 0.710200
+Took 0.21 minutes.
+Epoch: 140
+Train Loss: 0.000000, Acc: 0.995775
+Val Loss: 2.452837,  Acc: 0.710600
+Took 0.21 minutes.
+Epoch: 141
+Train Loss: 0.000001, Acc: 0.995300
+Val Loss: 2.453360,  Acc: 0.708700
+Took 0.21 minutes.
+Epoch: 142
+Train Loss: 0.000000, Acc: 0.995925
+Val Loss: 2.467195,  Acc: 0.708100
+Took 0.21 minutes.
+Epoch: 143
+Train Loss: 0.000000, Acc: 0.996175
+Val Loss: 2.480359,  Acc: 0.710100
+Took 0.21 minutes.
+Epoch: 144
+Train Loss: 0.000000, Acc: 0.996275
+Val Loss: 2.472199,  Acc: 0.710100
+Took 0.21 minutes.
+Epoch: 145
+Train Loss: 0.000000, Acc: 0.996000
+Val Loss: 2.482147,  Acc: 0.710900
+Took 0.21 minutes.
+Epoch: 146
+Train Loss: 0.000000, Acc: 0.995575
+Val Loss: 2.466412,  Acc: 0.707400
+Took 0.21 minutes.
+Epoch: 147
+Train Loss: 0.000000, Acc: 0.996275
+Val Loss: 2.472069,  Acc: 0.710000
+Took 0.21 minutes.
+Epoch: 148
+Train Loss: 0.000000, Acc: 0.995800
+Val Loss: 2.475746,  Acc: 0.709200
+Took 0.21 minutes.
+Epoch: 149
+Train Loss: 0.000000, Acc: 0.995650
+Val Loss: 2.471905,  Acc: 0.710600
+Took 0.21 minutes.
+Epoch: 150
+Train Loss: 0.000000, Acc: 0.996100
+Val Loss: 2.481132,  Acc: 0.709600
+Took 0.21 minutes.
+Epoch: 151
+Train Loss: 0.000000, Acc: 0.996600
+Val Loss: 2.465466,  Acc: 0.709000
+Took 0.21 minutes.
+Epoch: 152
+Train Loss: 0.000000, Acc: 0.996175
+Val Loss: 2.466395,  Acc: 0.710400
+Took 0.21 minutes.
+Epoch: 153
+Train Loss: 0.000000, Acc: 0.996675
+Val Loss: 2.478718,  Acc: 0.710200
+Took 0.21 minutes.
+Epoch: 154
+Train Loss: 0.000000, Acc: 0.996200
+Val Loss: 2.481314,  Acc: 0.709700
+Took 0.21 minutes.
+Epoch: 155
+Train Loss: 0.000000, Acc: 0.995775
+Val Loss: 2.485950,  Acc: 0.710100
+Took 0.21 minutes.
+Epoch: 156
+Train Loss: 0.000000, Acc: 0.996125
+Val Loss: 2.483261,  Acc: 0.709100
+Took 0.21 minutes.
+Epoch: 157
+Train Loss: 0.000000, Acc: 0.995875
+Val Loss: 2.484720,  Acc: 0.709600
+Took 0.21 minutes.
+Epoch: 158
+Train Loss: 0.000000, Acc: 0.996550
+Val Loss: 2.494364,  Acc: 0.709700
+Took 0.21 minutes.
+Epoch: 159
+Train Loss: 0.000000, Acc: 0.996300
+Val Loss: 2.500777,  Acc: 0.708500
+Took 0.21 minutes.
+Epoch: 160
+Train Loss: 0.000000, Acc: 0.996400
+Val Loss: 2.499967,  Acc: 0.707800
+Took 0.21 minutes.
+Best epoch: 26
+Final train loss: 0.0000
+Final train accuracy: 0.7687
+Final val loss: 0.9731
+Final val accuracy: 0.7281
+Test accuracy: 0.8233
