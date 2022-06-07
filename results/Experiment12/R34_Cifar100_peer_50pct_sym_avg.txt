@@ -1,0 +1,13 @@
+Repeats: 1
+Average Training Accuracy: 0.1887
+Stdev Training Accuracy: 0.0
+Average Training Loss: 9.460813075065612e-05
+Stdev Training Loss: 0.0
+Average Validation Accuracy: 0.1568
+Stdev Validation Accuracy: 0.0
+Average Validation Loss: 4.161095108032226
+Stdev Validation Loss: 0.0
+Average Test Accuracy: 0.3223
+Stdev Test Accuracy: 0.0
+Average Test Loss: 3.0083686328887937
+Stdev Test Loss: 0.0
