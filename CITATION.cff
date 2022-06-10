@@ -1,0 +1,20 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Want to get robust? Time to lose weights.
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - name-particle: Alexander
+    family-names: Mars
+    affiliation: The University Of Sydney
+    orcid: 'https://orcid.org/0000-0001-5947-5252'
+  - name-particle: Vinoth
+    family-names: Nandakumar
+    affiliation: The University Of Sydney
+  - name-particle: Tongliang
+    family-names: Liu
+    affiliation: The University Of Sydney
